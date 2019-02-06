@@ -1,9 +1,7 @@
-// https://catappapi.herokuapp.com/users/123
-
 var fetch = require('node-fetch');
 
 (async () => {
-    const a = await fetch('https://catappapi.herokuapp.com/users/123')
+    let a = await fetch('https://catappapi.herokuapp.com/users/123')
     const response = await a.json();
     const cats = await response.cats;
     cats.forEach(async (cat) => {
